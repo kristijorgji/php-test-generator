@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": ">=7.1",
-    "symfony/console": "^3.3",
+    "symfony/console": ">=3.3",
     "nikic/php-parser": "^3.1"
   },
   "require-dev": {
@@ -32,5 +32,6 @@
       "kristijorgji\\Tests\\Factories\\": "tests/factories/",
       "kristijorgji\\Tests\\Helpers\\": "tests/helpers/"
     }
-  }
+  },
+  "bin": ["bin/phpTestGenerator"]
 }
