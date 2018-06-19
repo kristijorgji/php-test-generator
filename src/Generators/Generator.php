@@ -92,7 +92,9 @@ class Generator extends GeneratorContract
         $shouldExclude = function (string $path) use ($config) {
             foreach ($config->getExcludePatterns()->all() as $excludePattern) {
                 if ($excludePattern[0] === '#') {
-                    return preg_match($excludePattern, $path) == 1;
+                    if (preg_match($excludePattern, $path) == 1) {
+                        return true;
+                    }
                 } else {
                     $excludePath = realpath($config->getSourcePath() . '/' . $excludePattern);
                     if ($excludePath === $path) {

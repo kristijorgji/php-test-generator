@@ -3,6 +3,7 @@
 namespace kristijorgji\PhpTestGenerator\Console\Commands;
 
 use kristijorgji\PhpTestGenerator\AppInfo;
+use kristijorgji\PhpTestGenerator\Support\Utilities;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputArgument;
@@ -53,7 +54,7 @@ class InitCommand extends Command
             ));
         }
 
-        $contents = file_get_contents(basePath(AppInfo::DEFAULT_CONFIG_FILENAME));
+        $contents = file_get_contents(Utilities::basePath(AppInfo::DEFAULT_CONFIG_FILENAME));
 
         $wasWritten = false;
         try {
