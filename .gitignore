@@ -1,0 +1,14 @@
+.idea/
+.vagrant/
+vendor/
+.env
+logs/
+tests/coverage/
+*.sublime-project
+*.swp
+*.sublime-workspace
+Thumbs.db
+desktop.ini
+.DS_Store
+Samples/
+Output/

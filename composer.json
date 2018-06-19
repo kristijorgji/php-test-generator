@@ -1,0 +1,36 @@
+{
+  "name": "kristijorgji/php-test-generator",
+  "type": "library",
+  "description": "PHP test skeletons generator",
+  "keywords": ["php", "test", "code", "generator"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kristi Jorgji"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "symfony/console": "^3.3",
+    "nikic/php-parser": "^3.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "kristijorgji\\PhpTestGenerator\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "kristijorgji\\UnitTests\\": "tests/unit/",
+      "kristijorgji\\IntegrationTests\\": "tests/integration/",
+      "kristijorgji\\Tests\\Factories\\": "tests/factories/",
+      "kristijorgji\\Tests\\Helpers\\": "tests/helpers/"
+    }
+  }
+}
